@@ -138,6 +138,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/forum:addinstance',
     ],
+    'local_mcpconnector_create_choice' => [
+        'classname' => 'local_mcpconnector\external\create_choice',
+        'description' => 'Creates a Choice (poll) activity in a course section.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/choice:addinstance',
+    ],
 ];
 
 $services = [
@@ -172,6 +178,7 @@ $services = [
             'local_mcpconnector_add_numerical_question',
             'local_mcpconnector_add_matching_question',
             'local_mcpconnector_create_forum',
+            'local_mcpconnector_create_choice',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,

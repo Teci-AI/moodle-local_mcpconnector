@@ -21,5 +21,6 @@
 - `local_mcpconnector_add_numerical_question`: adds a new numerical question (without units) to a quiz.
 - `local_mcpconnector_add_matching_question`: adds a new matching question to a quiz.
 - `local_mcpconnector_create_forum`: creates a Forum activity with the default forum settings of the site.
+- `local_mcpconnector_create_choice`: creates a Choice (poll) activity.
 - Rejected parameters report the reason in the error message, not only in the debug information.
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.
