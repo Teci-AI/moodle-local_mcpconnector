@@ -72,6 +72,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:update, moodle/course:movesections, moodle/course:manageactivities',
     ],
+    'local_mcpconnector_update_activity' => [
+        'classname' => 'local_mcpconnector\external\update_activity',
+        'description' => 'Renames and/or shows or hides an activity.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, moodle/course:activityvisibility',
+    ],
 ];
 
 $services = [
@@ -95,6 +101,7 @@ $services = [
             'local_mcpconnector_create_url',
             'local_mcpconnector_create_section',
             'local_mcpconnector_delete_section',
+            'local_mcpconnector_update_activity',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,

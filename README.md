@@ -51,6 +51,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_create_url` | courseid, section=0, name, externalurl, intro="", display=0, visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_create_section` | courseid, name, summary="", position=0 (0 adds it at the end) | `sectionid`, `sectionnum` |
 | `local_mcpconnector_delete_section` | courseid, sectionnum (1 or more) | `success` |
+| `local_mcpconnector_update_activity` | cmid, name="" (empty keeps it), visible=-1 (1 show, 0 hide, -1 keep) | `cmid`, `name`, `visible`, `changed` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.

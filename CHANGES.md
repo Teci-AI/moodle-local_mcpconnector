@@ -10,4 +10,5 @@
 - `local_mcpconnector_create_url`: creates a URL resource.
 - `local_mcpconnector_create_section`: creates a course section.
 - `local_mcpconnector_delete_section`: deletes a course section and its activities.
+- `local_mcpconnector_update_activity`: renames and/or shows or hides an activity.
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.
