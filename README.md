@@ -55,9 +55,17 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_move_activity` | cmid, section | `cmid`, `section` |
 | `local_mcpconnector_delete_activity` | cmid | `cmid`, `success` |
 | `local_mcpconnector_create_quiz` | courseid, section=0, name, intro="", timeopen=0, timeclose=0, timelimit=0, grade=100, attempts=0, visible=1 | `cmid`, `instanceid` |
+| `local_mcpconnector_add_quiz_question` | quizcmid, name, questiontext, answers [{text, fraction=0, feedback=""}] (2 or more), single=1, defaultmark=1 | `questionid`, `slot` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.
+
+The `add_*_question` functions save the question in the quiz's own question
+bank (its default category) and add it at the end of the quiz, as the quiz's
+*Add > a new question* does. They refuse quizzes that already have attempts.
+Each question type is checked like its editing form: fractions must be
+Moodle grade values (1.0, 0.5, 0.3333333, 0.25… within 0.005, so 0.33 is
+read as a third), and a matching question needs at least three pairs.
 
 ## Development
 

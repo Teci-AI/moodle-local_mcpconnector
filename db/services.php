@@ -96,6 +96,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/quiz:addinstance',
     ],
+    'local_mcpconnector_add_quiz_question' => [
+        'classname' => 'local_mcpconnector\external\add_quiz_question',
+        'description' => 'Adds a new multiple-choice question to a quiz.',
+        'type' => 'write',
+        'capabilities' => 'mod/quiz:manage, moodle/question:add',
+    ],
 ];
 
 $services = [
@@ -123,6 +129,7 @@ $services = [
             'local_mcpconnector_move_activity',
             'local_mcpconnector_delete_activity',
             'local_mcpconnector_create_quiz',
+            'local_mcpconnector_add_quiz_question',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
