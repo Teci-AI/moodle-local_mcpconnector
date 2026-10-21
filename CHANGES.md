@@ -13,5 +13,6 @@
 - `local_mcpconnector_update_activity`: renames and/or shows or hides an activity.
 - `local_mcpconnector_move_activity`: moves an activity to the end of another section.
 - `local_mcpconnector_delete_activity`: deletes an activity.
+- `local_mcpconnector_create_quiz`: creates an empty Quiz activity with the site's default quiz settings.
 - Rejected parameters report the reason in the error message, not only in the debug information.
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.

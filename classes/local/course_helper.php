@@ -107,6 +107,8 @@ class course_helper {
         $moduleinfo->section = $sectionnum;
         $moduleinfo->visible = $visible;
         $moduleinfo->visibleoncoursepage = 1;
+        // The activity settings form always sends an ID number; graded modules need it.
+        $moduleinfo->cmidnumber = '';
 
         return add_moduleinfo($moduleinfo, $course);
     }

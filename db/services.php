@@ -90,6 +90,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities',
     ],
+    'local_mcpconnector_create_quiz' => [
+        'classname' => 'local_mcpconnector\external\create_quiz',
+        'description' => 'Creates an empty Quiz activity with the default quiz settings of the site.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/quiz:addinstance',
+    ],
 ];
 
 $services = [
@@ -116,6 +122,7 @@ $services = [
             'local_mcpconnector_update_activity',
             'local_mcpconnector_move_activity',
             'local_mcpconnector_delete_activity',
+            'local_mcpconnector_create_quiz',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
