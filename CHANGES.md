@@ -6,4 +6,5 @@
 - `local_mcpconnector_create_page`: creates a Page activity.
 - `local_mcpconnector_update_page`: replaces a Page's content and, optionally, its description.
 - `local_mcpconnector_create_book`: creates a Book activity with its first chapter.
+- `local_mcpconnector_create_label`: creates a Text and media area (label).
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.

@@ -47,6 +47,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_create_page` | courseid, section=0, name, content, intro="", visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_update_page` | cmid, content, intro="" (empty keeps the description) | `cmid`, `success` |
 | `local_mcpconnector_create_book` | courseid, section=0, name, intro="", chaptertitle, chaptercontent, visible=1 | `cmid`, `instanceid`, `chapterid` |
+| `local_mcpconnector_create_label` | courseid, section=0, content, name="" (empty builds it from the content), visible=1 | `cmid`, `instanceid` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.

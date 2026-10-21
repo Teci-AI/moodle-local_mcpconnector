@@ -48,6 +48,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/book:addinstance, mod/book:edit',
     ],
+    'local_mcpconnector_create_label' => [
+        'classname' => 'local_mcpconnector\external\create_label',
+        'description' => 'Creates a Text and media area (label) in a course section.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/label:addinstance',
+    ],
 ];
 
 $services = [
@@ -67,6 +73,7 @@ $services = [
             'local_mcpconnector_create_page',
             'local_mcpconnector_update_page',
             'local_mcpconnector_create_book',
+            'local_mcpconnector_create_label',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
