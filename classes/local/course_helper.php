@@ -112,4 +112,23 @@ class course_helper {
 
         return add_moduleinfo($moduleinfo, $course);
     }
+
+    /**
+     * Moves an activity to the end of a section.
+     *
+     * Uses the course format actions from Moodle 5.2, where moveto_module() is deprecated.
+     *
+     * @param \cm_info $cm
+     * @param \section_info $section
+     */
+    public static function move_module_to_section(\cm_info $cm, \section_info $section): void {
+        global $CFG;
+
+        if (method_exists(\core_courseformat\local\cmactions::class, 'move_end_section')) {
+            \core_courseformat\formatactions::cm($cm->course)->move_end_section($cm->id, $section->id);
+        } else {
+            require_once($CFG->dirroot . '/course/lib.php');
+            moveto_module($cm, $section);
+        }
+    }
 }

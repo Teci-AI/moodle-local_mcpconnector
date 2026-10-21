@@ -78,6 +78,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, moodle/course:activityvisibility',
     ],
+    'local_mcpconnector_move_activity' => [
+        'classname' => 'local_mcpconnector\external\move_activity',
+        'description' => 'Moves an activity to the end of another section of its course.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities',
+    ],
 ];
 
 $services = [
@@ -102,6 +108,7 @@ $services = [
             'local_mcpconnector_create_section',
             'local_mcpconnector_delete_section',
             'local_mcpconnector_update_activity',
+            'local_mcpconnector_move_activity',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
