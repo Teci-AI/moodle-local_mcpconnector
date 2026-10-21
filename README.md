@@ -1,0 +1,65 @@
+# MCP Connector (local_mcpconnector)
+
+A Moodle local plugin that adds the web service functions Moodle core lacks for
+course authoring: creating and editing activities and sections. Its client is
+moodle-mcp-connector, an MCP server that lets an AI agent author Moodle
+courses.
+
+Every function uses Moodle's own course APIs (`add_moduleinfo`,
+`update_moduleinfo`, course format actions…) and checks the same capabilities
+as Moodle's own course editing pages, so the token user can do nothing through
+this plugin that they could not do in the browser.
+
+## Requirements
+
+- Moodle 5.0 or later (5.x)
+- Web services and the REST protocol enabled
+
+## Installation
+
+1. Copy this folder to `local/mcpconnector` (`public/local/mcpconnector` on
+   Moodle 5.1 and later), or install the zip from *Site administration →
+   Plugins → Install plugins*.
+2. Run the upgrade (*Site administration → Notifications*, or
+   `php admin/cli/upgrade.php`).
+
+## Setup
+
+1. *Site administration → General → Advanced features*: enable web services.
+2. *Site administration → Server → Web services → Manage protocols*: enable REST.
+3. Create a dedicated user for the agent. Give it a role (for example Teacher)
+   only in the courses it should edit.
+4. *Site administration → Server → Web services → External services*: enable
+   **MCP Connector Service** and, under *Authorised users*, add the dedicated
+   user. The service is disabled by default and only open to authorised users.
+5. *Manage tokens*: create a token for that user and the MCP Connector Service.
+
+The service also contains the core read functions the client's `content` tool
+set uses (`core_course_get_contents` and others), so one token covers reading
+and authoring course content. It allows file downloads (needed by the client's
+`read_activity` tool).
+
+## Functions
+
+| Function | Parameters | Returns |
+|---|---|---|
+| `local_mcpconnector_get_info` | none | `component`, `version`, `release` |
+
+`section` / `sectionnum` parameters are section numbers within the course
+(0 is the general section), not section database ids.
+
+## Development
+
+Run the tests from the Moodle root:
+
+```bash
+vendor/bin/phpunit --testsuite local_mcpconnector_testsuite
+```
+
+Continuous integration runs
+[moodle-plugin-ci](https://moodlehq.github.io/moodle-plugin-ci/) on every
+supported Moodle 5.x branch.
+
+## License
+
+2026 Teci. GNU GPL v3 or later; see <http://www.gnu.org/copyleft/gpl.html>.
