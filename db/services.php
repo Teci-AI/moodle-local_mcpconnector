@@ -120,6 +120,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'mod/quiz:manage, moodle/question:add',
     ],
+    'local_mcpconnector_add_numerical_question' => [
+        'classname' => 'local_mcpconnector\external\add_numerical_question',
+        'description' => 'Adds a new numerical question to a quiz.',
+        'type' => 'write',
+        'capabilities' => 'mod/quiz:manage, moodle/question:add',
+    ],
 ];
 
 $services = [
@@ -151,6 +157,7 @@ $services = [
             'local_mcpconnector_add_truefalse_question',
             'local_mcpconnector_add_shortanswer_question',
             'local_mcpconnector_add_essay_question',
+            'local_mcpconnector_add_numerical_question',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,

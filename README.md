@@ -59,6 +59,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_add_truefalse_question` | quizcmid, name, questiontext, correctanswer (1 true, 0 false), defaultmark=1 | `questionid`, `slot` |
 | `local_mcpconnector_add_shortanswer_question` | quizcmid, name, questiontext, answers [string] (1 or more, all full marks), usecase=0, defaultmark=1 | `questionid`, `slot` |
 | `local_mcpconnector_add_essay_question` | quizcmid, name, questiontext, graderinfo="", responsetemplate="", responselines=15, attachments=0, defaultmark=1 | `questionid`, `slot` |
+| `local_mcpconnector_add_numerical_question` | quizcmid, name, questiontext, answers [{answer, tolerance=0, fraction=1, feedback=""}] (1 or more), defaultmark=1 | `questionid`, `slot` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.

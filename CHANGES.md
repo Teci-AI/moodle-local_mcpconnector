@@ -18,5 +18,6 @@
 - `local_mcpconnector_add_truefalse_question`: adds a new true/false question to a quiz.
 - `local_mcpconnector_add_shortanswer_question`: adds a new short-answer question to a quiz.
 - `local_mcpconnector_add_essay_question`: adds a new essay question to a quiz.
+- `local_mcpconnector_add_numerical_question`: adds a new numerical question (without units) to a quiz.
 - Rejected parameters report the reason in the error message, not only in the debug information.
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.
