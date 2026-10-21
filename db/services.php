@@ -102,6 +102,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'mod/quiz:manage, moodle/question:add',
     ],
+    'local_mcpconnector_add_truefalse_question' => [
+        'classname' => 'local_mcpconnector\external\add_truefalse_question',
+        'description' => 'Adds a new true/false question to a quiz.',
+        'type' => 'write',
+        'capabilities' => 'mod/quiz:manage, moodle/question:add',
+    ],
 ];
 
 $services = [
@@ -130,6 +136,7 @@ $services = [
             'local_mcpconnector_delete_activity',
             'local_mcpconnector_create_quiz',
             'local_mcpconnector_add_quiz_question',
+            'local_mcpconnector_add_truefalse_question',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
