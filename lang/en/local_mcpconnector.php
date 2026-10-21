@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['backuptoolarge'] = 'The course backup is {$a}; backups over 100 MB cannot be transferred through the web service.';
+$string['backupuserslocked'] = 'The site\'s backup settings lock whether user data is included, so it cannot be changed for this backup.';
 $string['cannotdeletesection'] = 'The course format does not allow deleting section {$a}.';
 $string['cannotdeletesectionzero'] = 'The general section (section 0) cannot be deleted.';
 $string['invalidparameter'] = 'Invalid parameter value: {$a}';

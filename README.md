@@ -64,6 +64,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_create_forum` | courseid, section=0, name, intro="", type="general" (general, eachuser, single, qanda, blog), visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_create_choice` | courseid, section=0, name, question, options [string] (2 or more), allowupdate=1, visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_create_assignment` | courseid, section=0, name, intro="", duedate=0, grade=100, visible=1 | `cmid`, `instanceid` |
+| `local_mcpconnector_backup_course` | courseid, includeusers=0 | `filename`, `size`, `content_base64` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.

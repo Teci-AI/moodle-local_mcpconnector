@@ -150,6 +150,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/assign:addinstance',
     ],
+    'local_mcpconnector_backup_course' => [
+        'classname' => 'local_mcpconnector\external\backup_course',
+        'description' => 'Backs up a course and returns the .mbz file, base64-encoded.',
+        'type' => 'write',
+        'capabilities' => 'moodle/backup:backupcourse, moodle/backup:userinfo',
+    ],
 ];
 
 $services = [
@@ -186,6 +192,7 @@ $services = [
             'local_mcpconnector_create_forum',
             'local_mcpconnector_create_choice',
             'local_mcpconnector_create_assignment',
+            'local_mcpconnector_backup_course',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
