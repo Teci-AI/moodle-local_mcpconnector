@@ -132,6 +132,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'mod/quiz:manage, moodle/question:add',
     ],
+    'local_mcpconnector_create_forum' => [
+        'classname' => 'local_mcpconnector\external\create_forum',
+        'description' => 'Creates a Forum activity in a course section.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/forum:addinstance',
+    ],
 ];
 
 $services = [
@@ -165,6 +171,7 @@ $services = [
             'local_mcpconnector_add_essay_question',
             'local_mcpconnector_add_numerical_question',
             'local_mcpconnector_add_matching_question',
+            'local_mcpconnector_create_forum',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
