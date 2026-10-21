@@ -21,7 +21,7 @@ use core_external\external_function_parameters;
 use core_external\external_multiple_structure;
 use core_external\external_single_structure;
 use core_external\external_value;
-use invalid_parameter_exception;
+use local_mcpconnector\local\invalid_parameter_exception;
 
 /**
  * Web service function local_mcpconnector_update_activity.

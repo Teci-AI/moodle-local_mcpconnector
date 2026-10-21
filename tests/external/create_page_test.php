@@ -139,12 +139,17 @@ final class create_page_test extends \advanced_testcase {
     }
 
     /**
-     * An empty name is rejected.
+     * An empty name is rejected, and the message says why (web service clients do not see debug information).
      */
     public function test_execute_empty_name(): void {
         $this->login_as('editingteacher');
 
-        $this->expectException(invalid_parameter_exception::class);
-        $this->call(['courseid' => $this->course->id, 'section' => 0, 'name' => '  ', 'content' => 'C']);
+        try {
+            $this->call(['courseid' => $this->course->id, 'section' => 0, 'name' => '  ', 'content' => 'C']);
+            $this->fail('Expected an invalid_parameter_exception');
+        } catch (invalid_parameter_exception $e) {
+            $this->assertSame('invalidparameter', $e->errorcode);
+            $this->assertSame('Invalid parameter value: name must not be empty', $e->getMessage());
+        }
     }
 }

@@ -16,8 +16,6 @@
 
 namespace local_mcpconnector\local;
 
-use invalid_parameter_exception;
-
 /**
  * Course and activity helpers shared by the web service functions.
  *
