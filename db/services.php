@@ -54,6 +54,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/label:addinstance',
     ],
+    'local_mcpconnector_create_url' => [
+        'classname' => 'local_mcpconnector\external\create_url',
+        'description' => 'Creates a URL resource in a course section.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/url:addinstance',
+    ],
 ];
 
 $services = [
@@ -74,6 +80,7 @@ $services = [
             'local_mcpconnector_update_page',
             'local_mcpconnector_create_book',
             'local_mcpconnector_create_label',
+            'local_mcpconnector_create_url',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
