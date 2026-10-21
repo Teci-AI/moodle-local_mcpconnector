@@ -36,6 +36,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/page:addinstance',
     ],
+    'local_mcpconnector_update_page' => [
+        'classname' => 'local_mcpconnector\external\update_page',
+        'description' => 'Replaces the content, and optionally the description, of a Page activity.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities',
+    ],
 ];
 
 $services = [
@@ -53,6 +59,7 @@ $services = [
             // This plugin's functions.
             'local_mcpconnector_get_info',
             'local_mcpconnector_create_page',
+            'local_mcpconnector_update_page',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
