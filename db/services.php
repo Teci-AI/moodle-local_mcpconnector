@@ -60,6 +60,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/url:addinstance',
     ],
+    'local_mcpconnector_create_section' => [
+        'classname' => 'local_mcpconnector\external\create_section',
+        'description' => 'Creates a course section, at the end or at a given position.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:update, moodle/course:movesections',
+    ],
 ];
 
 $services = [
@@ -81,6 +87,7 @@ $services = [
             'local_mcpconnector_create_book',
             'local_mcpconnector_create_label',
             'local_mcpconnector_create_url',
+            'local_mcpconnector_create_section',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
