@@ -42,6 +42,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities',
     ],
+    'local_mcpconnector_create_book' => [
+        'classname' => 'local_mcpconnector\external\create_book',
+        'description' => 'Creates a Book activity with its first chapter.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/book:addinstance, mod/book:edit',
+    ],
 ];
 
 $services = [
@@ -60,6 +66,7 @@ $services = [
             'local_mcpconnector_get_info',
             'local_mcpconnector_create_page',
             'local_mcpconnector_update_page',
+            'local_mcpconnector_create_book',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
