@@ -131,4 +131,22 @@ class course_helper {
             moveto_module($cm, $section);
         }
     }
+
+    /**
+     * Deletes an activity.
+     *
+     * Uses the course format actions from Moodle 5.2, where course_delete_module() is deprecated.
+     *
+     * @param \cm_info $cm
+     */
+    public static function delete_module(\cm_info $cm): void {
+        global $CFG;
+
+        if (method_exists(\core_courseformat\local\cmactions::class, 'delete')) {
+            \core_courseformat\formatactions::cm($cm->course)->delete($cm->id);
+        } else {
+            require_once($CFG->dirroot . '/course/lib.php');
+            course_delete_module($cm->id);
+        }
+    }
 }

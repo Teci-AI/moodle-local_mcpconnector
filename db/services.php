@@ -84,6 +84,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities',
     ],
+    'local_mcpconnector_delete_activity' => [
+        'classname' => 'local_mcpconnector\external\delete_activity',
+        'description' => 'Deletes an activity and all its data.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities',
+    ],
 ];
 
 $services = [
@@ -109,6 +115,7 @@ $services = [
             'local_mcpconnector_delete_section',
             'local_mcpconnector_update_activity',
             'local_mcpconnector_move_activity',
+            'local_mcpconnector_delete_activity',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
