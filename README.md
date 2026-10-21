@@ -65,6 +65,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | `local_mcpconnector_create_choice` | courseid, section=0, name, question, options [string] (2 or more), allowupdate=1, visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_create_assignment` | courseid, section=0, name, intro="", duedate=0, grade=100, visible=1 | `cmid`, `instanceid` |
 | `local_mcpconnector_backup_course` | courseid, includeusers=0 | `filename`, `size`, `content_base64` |
+| `local_mcpconnector_restore_course` | content_base64, categoryid=1, fullname="", shortname="" (empty keeps the backup's names) | `courseid`, `fullname`, `shortname` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.
@@ -75,6 +76,14 @@ bank (its default category) and add it at the end of the quiz, as the quiz's
 Each question type is checked like its editing form: fractions must be
 Moodle grade values (1.0, 0.5, 0.3333333, 0.25… within 0.005, so 0.33 is
 read as a third), and a matching question needs at least three pairs.
+
+`backup_course` and `restore_course` run Moodle's course backup and restore
+synchronously with the site's general backup defaults, and refuse files over
+100 MB. The web server's upload limits (`post_max_size`, `memory_limit`) must
+allow the base64-encoded file, which is about a third larger. `restore_course`
+always creates a new course and deletes it again if the restore fails. As on
+the restore page, names that clash with an existing course get a " copy 1" or
+"_1" suffix; the result returns the names used.
 
 ## Development
 

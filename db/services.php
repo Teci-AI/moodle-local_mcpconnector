@@ -156,6 +156,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/backup:backupcourse, moodle/backup:userinfo',
     ],
+    'local_mcpconnector_restore_course' => [
+        'classname' => 'local_mcpconnector\external\restore_course',
+        'description' => 'Restores a course backup (.mbz, base64-encoded) into a new course.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:create, moodle/restore:restorecourse, moodle/restore:uploadfile',
+    ],
 ];
 
 $services = [
@@ -193,6 +199,7 @@ $services = [
             'local_mcpconnector_create_choice',
             'local_mcpconnector_create_assignment',
             'local_mcpconnector_backup_course',
+            'local_mcpconnector_restore_course',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,

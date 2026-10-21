@@ -24,5 +24,6 @@
 - `local_mcpconnector_create_choice`: creates a Choice (poll) activity.
 - `local_mcpconnector_create_assignment`: creates an Assignment with online text and file submissions and feedback comments.
 - `local_mcpconnector_backup_course`: backs up a course and returns the .mbz file (up to 100 MB).
+- `local_mcpconnector_restore_course`: restores a course backup into a new course.
 - Rejected parameters report the reason in the error message, not only in the debug information.
 - "MCP Connector Service" (`mcpconnector`), disabled by default, authorised users only.
