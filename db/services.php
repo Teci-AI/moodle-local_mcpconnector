@@ -108,6 +108,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'mod/quiz:manage, moodle/question:add',
     ],
+    'local_mcpconnector_add_shortanswer_question' => [
+        'classname' => 'local_mcpconnector\external\add_shortanswer_question',
+        'description' => 'Adds a new short-answer question to a quiz.',
+        'type' => 'write',
+        'capabilities' => 'mod/quiz:manage, moodle/question:add',
+    ],
 ];
 
 $services = [
@@ -137,6 +143,7 @@ $services = [
             'local_mcpconnector_create_quiz',
             'local_mcpconnector_add_quiz_question',
             'local_mcpconnector_add_truefalse_question',
+            'local_mcpconnector_add_shortanswer_question',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
