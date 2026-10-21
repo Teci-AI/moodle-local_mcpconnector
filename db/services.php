@@ -30,6 +30,12 @@ $functions = [
         'description' => 'Returns the installed local_mcpconnector version, for client compatibility checks.',
         'type' => 'read',
     ],
+    'local_mcpconnector_create_page' => [
+        'classname' => 'local_mcpconnector\external\create_page',
+        'description' => 'Creates a Page activity in a course section.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/page:addinstance',
+    ],
 ];
 
 $services = [
@@ -46,6 +52,7 @@ $services = [
             'mod_lesson_get_pages',
             // This plugin's functions.
             'local_mcpconnector_get_info',
+            'local_mcpconnector_create_page',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,

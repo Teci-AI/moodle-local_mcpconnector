@@ -26,3 +26,4 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'MCP Connector';
 $string['privacy:metadata'] = 'The MCP Connector plugin does not store any personal data. It only creates and edits course content through Moodle\'s own APIs.';
+$string['sectionnotfound'] = 'Section {$a} does not exist in this course.';

@@ -44,6 +44,7 @@ and authoring course content. It allows file downloads (needed by the client's
 | Function | Parameters | Returns |
 |---|---|---|
 | `local_mcpconnector_get_info` | none | `component`, `version`, `release` |
+| `local_mcpconnector_create_page` | courseid, section=0, name, content, intro="", visible=1 | `cmid`, `instanceid` |
 
 `section` / `sectionnum` parameters are section numbers within the course
 (0 is the general section), not section database ids.
