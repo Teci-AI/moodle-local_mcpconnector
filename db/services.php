@@ -144,6 +144,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:manageactivities, mod/choice:addinstance',
     ],
+    'local_mcpconnector_create_assignment' => [
+        'classname' => 'local_mcpconnector\external\create_assignment',
+        'description' => 'Creates an Assignment with online text and file submissions and feedback comments.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:manageactivities, mod/assign:addinstance',
+    ],
 ];
 
 $services = [
@@ -179,6 +185,7 @@ $services = [
             'local_mcpconnector_add_matching_question',
             'local_mcpconnector_create_forum',
             'local_mcpconnector_create_choice',
+            'local_mcpconnector_create_assignment',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
