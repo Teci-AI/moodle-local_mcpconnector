@@ -24,6 +24,8 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+$string['cannotdeletesection'] = 'The course format does not allow deleting section {$a}.';
+$string['cannotdeletesectionzero'] = 'The general section (section 0) cannot be deleted.';
 $string['pluginname'] = 'MCP Connector';
 $string['privacy:metadata'] = 'The MCP Connector plugin does not store any personal data. It only creates and edits course content through Moodle\'s own APIs.';
 $string['sectionnotfound'] = 'Section {$a} does not exist in this course.';

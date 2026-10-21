@@ -66,6 +66,12 @@ $functions = [
         'type' => 'write',
         'capabilities' => 'moodle/course:update, moodle/course:movesections',
     ],
+    'local_mcpconnector_delete_section' => [
+        'classname' => 'local_mcpconnector\external\delete_section',
+        'description' => 'Deletes a course section and every activity in it.',
+        'type' => 'write',
+        'capabilities' => 'moodle/course:update, moodle/course:movesections, moodle/course:manageactivities',
+    ],
 ];
 
 $services = [
@@ -88,6 +94,7 @@ $services = [
             'local_mcpconnector_create_label',
             'local_mcpconnector_create_url',
             'local_mcpconnector_create_section',
+            'local_mcpconnector_delete_section',
         ],
         'shortname' => 'mcpconnector',
         'enabled' => 0,
