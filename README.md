@@ -17,9 +17,10 @@ this plugin that they could not do in the browser.
 
 ## Installation
 
-1. Copy this folder to `local/mcpconnector` (`public/local/mcpconnector` on
-   Moodle 5.1 and later), or install the zip from *Site administration →
-   Plugins → Install plugins*.
+1. Download the zip from the repository's Releases page and install it from
+   *Site administration → Plugins → Install plugins*, or unzip it so the
+   plugin is in `local/mcpconnector` (`public/local/mcpconnector` on Moodle 5.1
+   and later).
 2. Run the upgrade (*Site administration → Notifications*, or
    `php admin/cli/upgrade.php`).
 

@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.1.0 (2026-10-22)
+
+First release (alpha), for Moodle 5.0 and later.
 
 - `local_mcpconnector_get_info`: reports the installed plugin version and release, for client compatibility checks.
 - `local_mcpconnector_create_page`: creates a Page activity.
