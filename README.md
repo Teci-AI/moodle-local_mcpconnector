@@ -100,4 +100,5 @@ supported Moodle 5.x branch.
 
 ## License
 
-2026 Teci. GNU GPL v3 or later; see <http://www.gnu.org/copyleft/gpl.html>.
+Copyright 2026 Teci. Licensed under the GNU GPL v3 or later; see
+[LICENSE](LICENSE) and <https://www.gnu.org/copyleft/gpl.html>.
